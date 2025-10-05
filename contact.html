@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Quote - Empowering the Nation</title>
+    <meta
+      name="description"
+      content="Get in touch for inquiries or request a personalized quote for our skills development courses."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Empowering the Nation Logo" />
+            <div class="logo-text">
+              <strong>Empowering the Nation</strong>
+              <span>Training Center</span>
+            </div>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Open menu">
+          <img src="images/menu-icon.png" alt="Menu" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="btn btn-primary">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Contact Hero Section -->
+      <section class="page-hero">
+        <div class="container">
+          <h1>Contact & Quote Request</h1>
+          <p>
+            Get in touch with us for general inquiries or request a personalized
+            quote for our skills development courses.
+          </p>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section class="contact-page-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- General Contact Form -->
+            <div class="form-container">
+              <h2>General Contact</h2>
+
+              <form id="general-contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="firstName"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="lastName"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="message-btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Course Quote Form -->
+            <div class="form-container">
+              <h3>Course Quote Request</h3>
+
+              <form id="quote-form">
+                <div class="form-group">
+                  <label for="quote-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="quote-name"
+                    name="quoteName"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="quote-email">Email Address</label>
+                  <input
+                    type="email"
+                    id="quote-email"
+                    name="quoteEmail"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="quote-phone">Phone Number</label>
+                  <input type="tel" id="quote-phone" name="quotePhone" />
+                </div>
+                <div class="form-group">
+                  <label>Select Courses</label>
+                  <div class="course-selection-box">
+                    <div class="checkbox-group">
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="course" value="1500" />
+                        <span>First Aid - R1500</span>
+                      </label>
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="1500" />
+                        Sewing - R1500</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="1500" />
+                        Landscaping - R1500</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="1500" />
+                        Life Skills - R1500</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="750" />
+                        Child Minding - R750</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="750" />
+                        Cooking - R750</label
+                      >
+                      <label class="checkbox-item"
+                        ><input type="checkbox" name="course" value="750" />
+                        Garden Maintenance - R750</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="quote-summary">
+                  <p>Subtotal: <span id="subtotal">R0.00</span></p>
+                  <p>Discount: <span id="discount">R0.00</span></p>
+                  <p>VAT (15%): <span id="vat">R0.00</span></p>
+                  <hr />
+                  <p class="total">Total: <span id="total">R0.00</span></p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="calculate-btn"
+                >
+                  Calculate Total
+                </button>
+                <button type="submit" class="btn btn-primary" id="request-btn">
+                  Request Quote
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations Section -->
+      <section class="locations-section">
+        <div class="container contact-locations">
+          <h3>Our Locations</h3>
+          <p>Visit us at any of our three Johannesburg locations.</p>
+          <div class="locations-grid">
+            <div class="location-card">
+              <h4>Johannesburg Central</h4>
+              <p lass="location-address">
+                <img
+                  src="images/iconLocal.png"
+                  alt="Location icon"
+                  class="icon"
+                />123 Main Street, Johannesburg CBD, 2001
+              </p>
+              <p class="location-phone">
+                <img
+                  src="images/iconPhone.png"
+                  alt="Phone icon"
+                  class="icon"
+                />+27 11 123 4567
+              </p>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.805825314713!2d28.04368931502999!3d-26.2029969834384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e9ebef617e1%3A0x19b252d1b0a88062!2sMain%20St%2C%20Johannesburg%2C%202001%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="location-card">
+              <h4>Sandton</h4>
+              <p class="location-address">
+                <img
+                  src="images/iconLocal.png"
+                  alt="Location icon"
+                  class="icon"
+                />456 Rivonia Road, Sandton, 2196
+              </p>
+              <p class="location-phone">
+                <img
+                  src="images/iconPhone.png"
+                  alt="Phone icon"
+                  class="icon"
+                />+27 11 234 5678
+              </p>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.03951199348!2d28.05593281502758!3d-26.10091498348507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95738804e5b6ab%3A0x48696b9a8cf63c16!2sRivonia%20Rd%2C%20Sandton%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678886500000!5m2!1sen!2sus"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="location-card">
+              <h4>Randburg</h4>
+              <p class="location-address">
+                <img
+                  src="images/iconLocal.png"
+                  alt="Location icon"
+                  class="icon"
+                />789 Republic Road, Randburg, 2194
+              </p>
+              <p class="location-phone">
+                <img
+                  src="images/iconPhone.png"
+                  alt="Phone icon"
+                  class="icon"
+                />+27 11 345 6789
+              </p>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.464645239923!2d27.99645931502798!3d-26.11584898347716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574163013a7a9%3A0x803566160538a7c1!2sRepublic%20Rd%2C%20Randburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678886600000!5m2!1sen!2sus"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h4>Empowering the Nation</h4>
+            <p>
+              Empowering domestic workers and gardeners through professional
+              skills training and development.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><img src="images/iconFace.png" alt="Facebook"
+              /></a>
+              <a href="#" aria-label="Twitter"
+                ><img src="images/iconTwit.png" alt="Twitter"
+              /></a>
+              <a href="#" aria-label="LinkedIn"
+                ><img src="images/iconLink.png" alt="LinkedIn"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-centers">
+            <h4>Training Centers</h4>
+            <ul>
+              <li>Johannesburg Central</li>
+              <li>Sandton</li>
+              <li>Randburg</li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>+27 11 123 4567</li>
+              <li>info@empoweringthenation.co.za</li>
+              <li>Monday - Friday: 8AM - 5:30PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Empowering The Nation. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
