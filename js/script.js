@@ -64,39 +64,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const calculateTotal = () => {
-      let subtotal = 0;
+      let total = 0;
       let selectedCoursesCount = 0;
 
+      // Calculate initial total from selected courses
       courseCheckboxes.forEach((checkbox) => {
         if (checkbox.checked) {
-          subtotal += parseFloat(checkbox.value);
+          total += parseFloat(checkbox.value);
           selectedCoursesCount++;
         }
       });
 
-      let discountRate = 0;
-      if (selectedCoursesCount === 2) {
-        discountRate = 0.05; // 5%
-      } else if (selectedCoursesCount === 3) {
-        discountRate = 0.1; // 10%
-      } else if (selectedCoursesCount > 3) {
-        discountRate = 0.15; // 15%
+      // Calculate VAT amount (15% of total)
+      const vatAmount = total * 0.15;
+
+      // Calculate subtotal (total - VAT)
+      const subtotal = total - vatAmount;
+
+      // Calculate discount based on number of courses
+      let discountAmount = 0;
+      if (selectedCoursesCount >= 2) {
+        if (selectedCoursesCount === 2) {
+          discountAmount = total * 0.05; // 5% of total
+        } else if (selectedCoursesCount === 3) {
+          discountAmount = total * 0.1; // 10% of total
+        } else if (selectedCoursesCount > 3) {
+          discountAmount = total * 0.15; // 15% of total
+        }
       }
 
-      const discountAmount = subtotal * discountRate;
-      const subtotalAfterDiscount = subtotal - discountAmount;
-      const vatAmount = subtotalAfterDiscount * 0.15; // 15% VAT
-      const totalAmount = subtotalAfterDiscount + vatAmount;
+      // Calculate final total after discount
+      const finalTotal = total - discountAmount;
 
       // Show quote summary
       if (quoteSummary) {
         quoteSummary.style.display = "block";
       }
 
+      // Update display values
       subtotalEl.textContent = `R${subtotal.toFixed(2)}`;
       discountEl.textContent = `R${discountAmount.toFixed(2)}`;
       vatEl.textContent = `R${vatAmount.toFixed(2)}`;
-      totalEl.textContent = `R${totalAmount.toFixed(2)}`;
+      totalEl.textContent = `R${finalTotal.toFixed(2)}`; // Now showing total after discount
     };
 
     // Add click event to calculate button
